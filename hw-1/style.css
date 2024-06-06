@@ -31,12 +31,11 @@
 
 .result {
     height: 56px;
-    aspect-ratio: 1;
-
+    width: 182px;
     font-size: 19px;
 
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
