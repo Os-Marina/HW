@@ -2,22 +2,14 @@ let inp = document.querySelectorAll('.check')
 let btnSub = document.getElementById('btnSub')
 let form = document.querySelector('form')
 
-
-
-inp.forEach(el => {el.addEventListener('input', function(event){
-//     if(event.target.value > 0){
-//         console.log('Успех')
-//     } else event.preventDefault();
+/*
+// else event.preventDefault();
 //     el.classList.add('err');
 //     console.log('Страница не обновилась');
 //     // console.log(el);
 //     // console.log(el.value);
 //     // console.log(el.value.length);
-})
-}
-) 
- 
-form.addEventListener('submit', checkInputs)
+*/
 /*
 function checkInputs(event){
     
@@ -32,7 +24,6 @@ function checkInputs(event){
    
 }
 */
-
 /*
 function validity(){
     inp.every(el => {
@@ -43,31 +34,44 @@ function validity(){
 
 }
 */
+/*
+// function validationForm(event){
+//         inp.forEach(inp => {if(event.target.value < 0){
+//         inp.classList.add('err');
+//     } })
+// }
+*/
+
+
+inp.forEach(el => {el.addEventListener('input', function(event){
+        if(event.target.value.length === 0){
+            el.classList.add('err');
+        } else {el.classList.remove('err')}
+        // return event 
+}
+)})
+
+// form.addEventListener('input', validationForm)
+form.addEventListener('submit', checkInputs)
 
 function checkInputs(event){
     
     inp.forEach(el => {
         
         if(el.value.length > 0){
-            console.log('Успех')
+            // flag = true;
+            // console.log('Успех')
             
         } else {
+            // flag = false;
             event.preventDefault();
             el.classList.add('err');
             console.log('Страница не обновилась');
         }
     })
+    // return flag
    
 }
-
-
-form.addEventListener('input', function(){
-    inp.forEach(el => {
-        el.classList.remove('err')
-    })
-})
-
-
 
 /*
 // inp.addEventListener('input', checkInputs)
