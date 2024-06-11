@@ -1,0 +1,18 @@
+html, body{
+	margin: 40px;
+}
+
+.err{
+	outline: 1px solid red;
+}
+
+.succ{
+	outline: 1px solid rgb(43, 255, 0);
+}
+
+.inpForm{
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
